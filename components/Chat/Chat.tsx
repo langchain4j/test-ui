@@ -64,8 +64,6 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   const [showScrollDownButton, setShowScrollDownButton] =
     useState<boolean>(false);
 
-  const [, forceUpdate] = useState<any>();
-
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -197,7 +195,6 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                 field: 'selectedConversation',
                 value: updatedConversation,
               });
-              forceUpdate({});  // Force a re-render
             }
           }
           saveConversation(updatedConversation);
