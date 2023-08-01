@@ -379,6 +379,11 @@ export const ChatInput = ({
           )}
         </div>
       </div>
+      <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
+        {t(
+          "ChatGD may produce inaccurate information about people, places, or facts. Please always verify the information yourself.",
+        )}
+      </div>
     </div>
   );
 };
